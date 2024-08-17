@@ -23,8 +23,8 @@ namespace Menu
                 handle.ClearConsole();
                 ShowMenu();
                 int position = handle.HandleKey(menuItems);
+
             }
-            //update
         }
         private void ShowMenu()
         {
@@ -38,11 +38,10 @@ namespace Menu
                 {
                     printf_Positions(menuItems[i], 20, 10 + i*2 , ConsoleColor.Yellow);
                 }
-                //test
             }
         }
 
-        static void printf_Positions(string s, int x, int y, ConsoleColor color)
+        public static void printf_Positions(string s, int x, int y, ConsoleColor color)
         {
             Console.OutputEncoding = Encoding.UTF8;
             Console.SetCursorPosition(x, y);

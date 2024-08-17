@@ -10,6 +10,7 @@ namespace Menu
     {
         private int positions;
 
+
         public void ClearConsole()
         {
             Console.Clear();
@@ -31,6 +32,27 @@ namespace Menu
                 if (positions == array.Length)
                 {
                     positions = 0;
+                }
+            }
+            if (key.Key == ConsoleKey.Enter || key.Key == ConsoleKey.Spacebar)
+            {
+                switch (positions)
+                {
+                    case 1:
+                        ClearConsole();
+                        menustart.printf_Positions("CHỌN ĐÚNG RỒI!! GIỎI QUÁ", 18, 12, ConsoleColor.Magenta);
+                        Console.ReadKey();
+                        break;
+                    case 2:
+                        ClearConsole();
+                        menustart.printf_Positions("CHỌN ĐÚNG RỒI!! GIỎI QUÁ", 18, 12, ConsoleColor.Red);
+                        Console.ReadKey();
+                        break;
+                    case 3:
+                        ClearConsole();
+                        menustart.printf_Positions("CHỌN ĐÚNG RỒI!! GIỎI QUÁ", 18, 12, ConsoleColor.Cyan);
+                        Console.ReadKey();
+                        break;
                 }
             }
             return positions;
